@@ -40,6 +40,7 @@ exsection: Descriptive statistics/Summary Statistics/Measures of Location/Median
 
 ```{r, echo=FALSE}
 htmltools::includeHTML("taxonomy_list.html")
+# process by process_source_excel_taxonomy
 ```
 
 ### Tags
@@ -95,59 +96,109 @@ exextra[Language]: English
 exextra[Level]: Statistical Literacy
 ```
 
-#### Type descriptions
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, , results='asis', comment=NA}
-library(readxl)
-library(kableExtra)
-type <- read_excel("source/taxonomie_2021-03-17.xlsx",
-          sheet = 2)
 
-# datatable(type[1:9, -2], rownames = FALSE)
 
-  # kbl(type[1:9, -2]) %>%
-  # kable_material(c("striped", "hover")) %>%
-  # kable_styling(full_width = F) %>%
-  # column_spec(1, bold = T, border_right = T) %>%
-  # column_spec(2, width = "30em") %>%
-  # column_spec(3, width = "30em")
+#### Типы вопросов
 
-for(row in 1:9) {
+* Calculation
 
-html.results = cat(paste0("<h5><strong>", type[row, 1],
-    "</strong></h5><p>", type[row, 3],
-    "</p><p><strong>Example:</strong>: ", type[row, 4],
-    "</p>"))
-}
-```
+A question containing simple (hand/calculator) calculations
 
-#### Level descriptions
+*Example*. M1 = 10, M2 = 24, s_pooled = 1.23. What is the value of Cohen's d? 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-library(readxl)
-level = read_excel("source/taxonomie_2021-03-17.xlsx",
-            sheet = 3)
+* Case
 
-# datatable(type[1:9, -2], rownames = FALSE)
-```
+Questions that belong to a longer description of a research study. Oftentimes multiple questions are asked about the same case/description.
 
-<h5>`r level[1, 1]`</h5>
+*Example*. NA
 
-<p>`r level[1, 2]`</p>
+* Conceptual
 
-<p><strong>Example</strong>: `r level[1, 3]`</p>
+Basic question asking about simple facts.
 
-<h5>`r level[2, 1]`</h5>
+*Example*. Which of the following properties is not a condition for establishing a causal relationship?
+a. Alternative explanations for the relationship between cause and effect can be excluded.
+b. The data shall be collected with a randomized experiment.
+c. There must be a relationship between the cause and the effect.
+d. The cause must precede the effect in time.
 
-<p>`r level[2, 2]`</p>
+* Creating graphs
 
-<p><strong>Example</strong>: `r level[2, 3]`</p>
+The student is asked to create a graph using data supplied with the question (either by hand or using a program).
 
-<h5>`r level[3, 1]`</h5>
+*Example*. NA
 
-<p>`r level[3, 2]`</p>
+* Data manipulation
 
-<p><strong>Example</strong>: `r level[3, 3]`</p>
+The student is asked to combine data, screen data, create new variables in a dataset, or calculate descriptive statistics using the data supplied with the question. 
+
+*Example*. NA
+
+* Interpretating graph
+
+The graph is supplied with the question. The student is asked to look at the graph and describe what is going on, draw conclusions based on the graph, etc. 
+
+*Example*. NA
+
+
+* Interpretating output
+
+The output is either supplied with the question or the student has run an analysis to create the output (combine with "Performing analysis"). The student is asked to look at the output and report results/draw conclusions based on it. 	
+
+*Example*. NA
+
+* Performing analysis
+
+The student is asked to conduct an analysis using a statistical program (combine with program type). 	
+
+*Example*. NA
+
+* Test choice		
+
+The student is presented with a description of research/study and is aksed to choose which hypotheses test should be used.
+
+*Example*. A researcher randomly assigns 100 students to a control group and an experimental group. All students take a math test. Half of the students in each group take the test on paper and half of the students take the test on a computer. The researcher determines the number of correctly answered questions for each student. 
+With which technique should the researcher analyze his data?
+a. ANOVA
+b. Cross-table analysis
+c. Two-way ANOVA
+d. ANCOVA
+
+
+#### Уровни понимания
+
+* Statistical Literacy (Bloom: Knowing)
+
+Identify, Describe, Translate, Interpret, Read, Compute
+
+Understanding and using the basic language and tools of statistics: knowing what basic statistical terms mean, understanding the use of simple statistical symbols, and recognizing and being able to interpret different representations of data 
+
+*Example*. A random sample of 30 first year students was selected at a public university to estimate the average score on a mathematics placement test that the state mandates for all freshmen. The average score for the sample was found to be 81.7 with a sample standard deviation of 11.45. Describe to someone who has not studied statistics what the standard deviation tells you about the variability of placement scores for this sample. 
+This item assesses statistical literacy because it focuses on understanding (knowing)
+what the term “standard deviation” means.
+
+* Statistical Reasoning (Bloom: Comprehending)
+
+Explain why, Explain how
+
+The way people reason with statistical ideas and make sense of statistical information. Statistical reasoning may involve connecting one concept to another (e.g., center and spread) or combining ideas about data and chance. Statistical reasoning involves understanding concepts at a deeper level than literacy, such as understanding why a sampling distribution becomes more normal as the sample size increases. Reasoning also means understanding and being able to explain statistical processes and being able to interpret particular statistical results (e.g., why a mean is much larger or smaller than a median, given the presence of an outlier). 
+
+*Example*. Without doing any calculations, which of the following histograms, A or B, would you expect have a higher standard deviation and why? 
+
+This item assesses statistical reasoning because students need to connect and reason about how the standard deviation of a distribution is affected by spread from the center (mean). They have to reason about the fact that Graph B would have a higher average deviation from the mean than Graph A, because Graph A has a higher proportion of its values clustered closer to the mean.
+
+* Statistical Thinking (Bloom: Application, Analysis, Synthesis, and Evaluation)
+
+Apply, Critique, Evaluate, Generalize
+
+Involves a higher order of thinking than does statistical reasoning. Statistical thinking has been described as the way professional statisticians think. It includes knowing how and why to use a particular method, measure, design or statistical model; deep understanding of the theories underlying statistical processes and methods; as well as understanding the constraints and limitations of statistics and statistical inference. Statistical thinking is also about understanding how statistical models are used to represent random phenomena, understanding how data are produced to estimate probabilities, recognizing how, when, and why to use inferential tools in solving a statistical problem, and being able to understand and utilize the context of a problem to plan and evaluate investigations and to draw conclusions
+
+*Example*. A random sample of 30 first year students was selected at a public university to estimate the average score on a mathematics placement test that the state mandates for all freshmen. The average score for the sample was found to be 81.7 with a sample standard deviation of 11.45. A psychology professor at a state college has read the results of the university study. The professor wants to know if students at his college are similar to students at the university with respect to their mathematics placement exam scores. This professor collects information for all 53 first year students enrolled this semester in a large section (321 students) of his “Introduction to Psychology” course. Based on this sample, he calculates a 95% confidence interval for the average mathematics placement scores exam to be 69.47–75.72. Below are two possible conclusions that the psychology professor might draw. For each conclusion, state whether it is valid or invalid. Explain your choice for both statements. Note that it is possible that neither conclusion is valid.  a. The average mathematics placement exam score for first year students at the state college is lower than the average mathematics placement exam score of first year students at the university. b. The average mathematics placement exam score for the 53 students in this section is lower than the average mathematics placement exam score of first year students at the university. 
+
+This item assesses statistical thinking because it asks students to think about the
+entire process involved in this research study in critiquing and justifying different
+possible conclusions.
 
 
 
