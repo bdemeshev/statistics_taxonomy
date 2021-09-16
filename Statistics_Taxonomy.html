@@ -246,12 +246,16 @@ div.tocify {
 
 
 <script src="data:application/javascript;base64,ZnVuY3Rpb24gY29weV9kYXRhKGNvbnRhaW5lcmlkKSB7CiAgdmFyIHJhbmdlID0gZG9jdW1lbnQuY3JlYXRlUmFuZ2UoKTsKICByYW5nZS5zZWxlY3ROb2RlKGNvbnRhaW5lcmlkKTsgLy9jaGFuZ2VkIGhlcmUKICB3aW5kb3cuZ2V0U2VsZWN0aW9uKCkucmVtb3ZlQWxsUmFuZ2VzKCk7IAogIHdpbmRvdy5nZXRTZWxlY3Rpb24oKS5hZGRSYW5nZShyYW5nZSk7IAogIGRvY3VtZW50LmV4ZWNDb21tYW5kKCJjb3B5Iik7CiAgd2luZG93LmdldFNlbGVjdGlvbigpLnJlbW92ZUFsbFJhbmdlcygpOwp9"></script>
+<div id="таксономия-статистики" class="section level2">
+<h2>Таксономия статистики</h2>
+<p>Изначальная таксономия была заимствована из проекта <a href="https://www.sharestats.nl">sharestats</a>.</p>
+</div>
 <div id="assigning-taxonomy" class="section level2 tabset">
 <h2 class="tabset">Assigning taxonomy</h2>
 <div id="statistics-taxonomy" class="section level3">
 <h3>Statistics Taxonomy</h3>
 <p>To add a taxonomy path to your r-exams markdown file, add <code>exsection:</code> to the <code>Meta-information</code> of your markdown file.</p>
-<p>You can copy the desired paths from the list below. You may add multiple path by separating them with a comma. <strong>No new lines allowed though</strong>.</p>
+<p>You can copy the desired paths from the list below. You may add multiple path by separating them with a comma. <strong>No new lines allowed though</strong>. Multiple path with comma will <strong>NOT</strong> work in moodle. Initial taxomomy was forked from <a href="https://www.sharestats.nl">sharestats</a> project.</p>
 <pre><code>Meta-information
 ================
 exsection: Descriptive statistics/Summary Statistics/Measures of Location/Median, Descriptive statistics/Summary Statistics/Measures of Spread/Standard Deviation</code></pre>
@@ -614,10 +618,10 @@ exsection: Descriptive statistics/Summary Statistics/Measures of Location/Median
 <strong><span id="Type" class="tag" onclick="copy_data(Type)">Type</span>:</strong> <span id="calc" class="tag" onclick="copy_data(calc)">Calculation</span> <span id="cas1" class="tag" onclick="copy_data(cas1)">Case</span> <span id="conc" class="tag" onclick="copy_data(conc)">Conceptual</span> <span id="crg" class="tag" onclick="copy_data(crg)">Creating graphs</span> <span id="dat" class="tag" onclick="copy_data(dat)">Data manipulation</span> <span id="intgr" class="tag" onclick="copy_data(intgr)">Interpretating graph</span> <span id="intou" class="tag" onclick="copy_data(intou)">Interpretating output</span> <span id="an" class="tag" onclick="copy_data(an)">Performing analysis</span> <span id="tch" class="tag" onclick="copy_data(tch)">Test choice</span>
 </li>
 <li>
-<strong><span id="Program" class="tag" onclick="copy_data(Program)">Program</span></strong>: <span id="SPSS" class="tag" onclick="copy_data(SPSS)">SPSS</span> <span id="JASP" class="tag" onclick="copy_data(JASP)">JASP</span> <span id="R" class="tag" onclick="copy_data(R)">R</span> <span id="STATA" class="tag" onclick="copy_data(STATA)">STATA</span> <span id="Excel" class="tag" onclick="copy_data(Excel)">Excel</span> <span id="Calculator" class="tag" onclick="copy_data(Calculator)">Calculator</span> <span id="Jamovi" class="tag" onclick="copy_data(Jamovi)">Jamovi</span>
+<strong><span id="Program" class="tag" onclick="copy_data(Program)">Program</span></strong>: <span id="SPSS" class="tag" onclick="copy_data(SPSS)">SPSS</span> <span id="JASP" class="tag" onclick="copy_data(JASP)">JASP</span> <span id="R" class="tag" onclick="copy_data(R)">R</span> <span id="STATA" class="tag" onclick="copy_data(STATA)">STATA</span> <span id="Excel" class="tag" onclick="copy_data(Excel)">Excel</span> <span id="Calculator" class="tag" onclick="copy_data(Calculator)">Calculator</span> <span id="Jamovi" class="tag" onclick="copy_data(Jamovi)">Jamovi</span> <span id="Python" class="tag" onclick="copy_data(Python)">Python</span>
 </li>
 <li>
-<strong><span id="Language" class="tag" onclick="copy_data(Language)">Language</span></strong>: <span id="English" class="tag" onclick="copy_data(English)">English</span> <span id="Dutch" class="tag" onclick="copy_data(Dutch)">Dutch</span>
+<strong><span id="Language" class="tag" onclick="copy_data(Language)">Language</span></strong>: <span id="English" class="tag" onclick="copy_data(English)">English</span> <span id="Dutch" class="tag" onclick="copy_data(Dutch)">Dutch</span> <span id="Russian" class="tag" onclick="copy_data(Russian)">Russian</span>
 </li>
 <li>
 <strong><span id="Level" class="tag" onclick="copy_data(Level)">Level</span></strong>: <span id="StatisticalLiteracy" class="tag" onclick="copy_data(StatisticalLiteracy)">Statistical Literacy</span> <span id="StatisticalReasoning" class="tag" onclick="copy_data(StatisticalReasoning)">Statistical Reasoning</span> <span id="StatisticalThinking" class="tag" onclick="copy_data(StatisticalThinking)">Statistical Thinking</span>
@@ -747,10 +751,6 @@ Apply, Critique, Evaluate, Generalize
 </div>
 </div>
 </div>
-<div id="sharestats-project" class="section level2">
-<h2>ShareStats project</h2>
-<p>More information on the ShareStats project can be found on <a href="www.sharestats.nl">our website</a>.</p>
-</div>
 
 
 
@@ -790,6 +790,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

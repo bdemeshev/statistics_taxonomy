@@ -14,6 +14,12 @@ output:
 source("functions.R")
 ```
 
+## Таксономия статистики
+
+Изначальная таксономия была заимствована из проекта [sharestats](https://www.sharestats.nl).
+
+
+
 
 ## Assigning taxonomy {.tabset}
 
@@ -21,7 +27,8 @@ source("functions.R")
 
 To add a taxonomy path to your r-exams markdown file, add `exsection:` to the `Meta-information` of your markdown file.
 
-You can copy the desired paths from the list below. You may add multiple path by separating them with a comma. **No new lines allowed though**.
+You can copy the desired paths from the list below. You may add multiple path by separating them with a comma. **No new lines allowed though**. Multiple path with comma will **NOT** work in moodle. Initial taxomomy was forked from [sharestats](https://www.sharestats.nl) project.
+
 
 ```{}
 Meta-information
@@ -63,10 +70,12 @@ We have four categories that can be applied.
 `r copyOnClick("Excel")`
 `r copyOnClick("Calculator")`
 `r copyOnClick("Jamovi")`
+`r copyOnClick("Python")`
 </li>
 <li><strong>`r copyOnClick("Language")`</strong>:
 `r copyOnClick("English")`
 `r copyOnClick("Dutch")`
+`r copyOnClick("Russian")`
 </li>
 <li><strong>`r copyOnClick("Level")`</strong>:
 `r copyOnClick("Statistical Literacy")`
@@ -91,11 +100,12 @@ exextra[Level]: Statistical Literacy
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, , results='asis', comment=NA}
 library(readxl)
 library(kableExtra)
-type <- read_excel("source/Taxonomie ShareStats versie 17 maart 2021.xlsx", sheet = 2)
+type <- read_excel("source/taxonomie_2021-03-17.xlsx",
+          sheet = 2)
 
-# datatable(type[1:9,-2], rownames = FALSE)
+# datatable(type[1:9, -2], rownames = FALSE)
 
-  # kbl(type[1:9,-2]) %>%
+  # kbl(type[1:9, -2]) %>%
   # kable_material(c("striped", "hover")) %>%
   # kable_styling(full_width = F) %>%
   # column_spec(1, bold = T, border_right = T) %>%
@@ -104,8 +114,10 @@ type <- read_excel("source/Taxonomie ShareStats versie 17 maart 2021.xlsx", shee
 
 for(row in 1:9) {
 
-  html.results <- cat(paste0("<h5><strong>",type[row,1],"</strong></h5><p>",type[row,3],"</p><p><strong>Example:</strong>: ", type[row,4],"</p>") )
-
+html.results = cat(paste0("<h5><strong>", type[row, 1],
+    "</strong></h5><p>", type[row, 3],
+    "</p><p><strong>Example:</strong>: ", type[row, 4],
+    "</p>"))
 }
 ```
 
@@ -113,29 +125,29 @@ for(row in 1:9) {
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(readxl)
-level <- read_excel("source/Taxonomie ShareStats versie 17 maart 2021.xlsx", sheet = 3)
+level = read_excel("source/taxonomie_2021-03-17.xlsx",
+            sheet = 3)
 
-# datatable(type[1:9,-2], rownames = FALSE)
+# datatable(type[1:9, -2], rownames = FALSE)
 ```
 
-<h5>`r level[1,1]`</h5>
+<h5>`r level[1, 1]`</h5>
 
-<p>`r level[1,2]`</p>
+<p>`r level[1, 2]`</p>
 
-<p><strong>Example</strong>: `r level[1,3]`</p>
+<p><strong>Example</strong>: `r level[1, 3]`</p>
 
-<h5>`r level[2,1]`</h5>
+<h5>`r level[2, 1]`</h5>
 
-<p>`r level[2,2]`</p>
+<p>`r level[2, 2]`</p>
 
-<p><strong>Example</strong>: `r level[2,3]`</p>
+<p><strong>Example</strong>: `r level[2, 3]`</p>
 
-<h5>`r level[3,1]`</h5>
+<h5>`r level[3, 1]`</h5>
 
-<p>`r level[3,2]`</p>
+<p>`r level[3, 2]`</p>
 
-<p><strong>Example</strong>: `r level[3,3]`</p>
+<p><strong>Example</strong>: `r level[3, 3]`</p>
 
-## ShareStats project
 
-More information on the ShareStats project can be found on [our website](www.sharestats.nl).
+
