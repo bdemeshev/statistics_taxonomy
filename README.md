@@ -1,4 +1,6 @@
-# Statistics_Taxonomy
-Main statistics taxonomy files and different views on taxonomy
+# Таксономия статистики
 
-[view page](https://bdemeshev.github.io/statistics_taxonomy/index.html)
+[Страничка с кликабельной таксономией](https://bdemeshev.github.io/statistics_taxonomy/statistics_taxonomy.html)
+
+[Statistics taxonomy page](https://bdemeshev.github.io/statistics_taxonomy/statistics_taxonomy.html)
+
