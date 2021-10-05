@@ -41,6 +41,13 @@ Descriptive statistics/Data representation/Tables
 Descriptive statistics/Data representation/Tables/Frequency table
 Descriptive statistics/Data representation/Tables/Contingency table
 Inferential Statistics
+Inferential Statistics/Estimators
+Inferential Statistics/Estimators/Bias
+Inferential Statistics/Estimators/Unbiased Estimator
+Inferential Statistics/Estimators/Efficient Estimator
+Inferential Statistics/Estimators/MSE
+Inferential Statistics/Estimators/Bias-Variance Decomposition
+Inferential Statistics/Estimators/Consistent Estimator
 Inferential Statistics/Maximum Likelihood
 Inferential Statistics/Maximum Likelihood/Fisher Information
 Inferential Statistics/Maximum Likelihood/Score Function
