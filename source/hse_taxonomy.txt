@@ -18,6 +18,7 @@ Descriptive statistics/Summary Statistics/Measures of Spread/Range
 Descriptive statistics/Summary Statistics/Measures of Spread/Standard Deviation
 Descriptive statistics/Summary Statistics/Measures of Spread/Variance
 Descriptive statistics/Summary Statistics/Measures of Spread/Interquartile Range
+Descriptive statistics/Summary Statistics/Sample Moments
 Descriptive statistics/Summary Statistics/Bivariate statistics
 Descriptive statistics/Summary Statistics/Bivariate statistics/Correlation
 Descriptive statistics/Summary Statistics/Bivariate statistics/Covariance
@@ -198,6 +199,7 @@ Probability/Elementary Probability/Permutations
 Probability/Elementary Probability/Conditional probability
 Probability/Elementary Probability/Random variables
 Probability/Elementary Probability/Random variables/Expected value
+Probability/Elementary Probability/Random variables/Moments
 Probability/Elementary Probability/Random variables/Variance
 Probability/Elementary Probability/Random variables/Rules for expected values
 Probability/Elementary Probability/Random variables/Random sample
