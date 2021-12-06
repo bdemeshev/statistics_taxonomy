@@ -197,11 +197,16 @@ Probability/Elementary Probability/General Rules/Independent events
 Probability/Elementary Probability/Combinations
 Probability/Elementary Probability/Permutations
 Probability/Elementary Probability/Conditional probability
+Probability/Elementary Probability/Random variables/Expected value conditional on event
+Probability/Elementary Probability/Random variables/Variance conditional on event
+Probability/Elementary Probability/Random variables/Expected value conditional on random variable
+Probability/Elementary Probability/Random variables/Variance conditional on random variable
 Probability/Elementary Probability/Random variables
-Probability/Elementary Probability/Random variables/Cumulative Distribution Function
-Probability/Elementary Probability/Random variables/Probability Density Function
-Probability/Elementary Probability/Random variables/Joint Density Function
-Probability/Elementary Probability/Random variables/Conditional Expected Value
+Probability/Elementary Probability/Random variables/Probability density function
+Probability/Elementary Probability/Random variables/Joint density function
+Probability/Elementary Probability/Random variables/Conditional density function
+Probability/Elementary Probability/Random variables/Cumulative distribution function
+Probability/Elementary Probability/Random variables/Joint cumulative distribution function
 Probability/Elementary Probability/Random variables/Expected value
 Probability/Elementary Probability/Random variables/Moments
 Probability/Elementary Probability/Random variables/Variance
@@ -216,6 +221,12 @@ Probability/Inequalities/Markov Inequality
 Probability/Inequalities/Chebyshev Inequality
 Probability/Inequalities/Chebyshev-Cantelli Inequality
 Probability/Inequalities/Jensen Inequality
+Probability/Sigma algebra
+Probability/Moment generating function
+Probability/Probability generating function
+Probability/Characteristic function
+Probability/Expected value conditional on sigma algebra
+Probability/Probability differential form
 Distributions
 Distributions/Discrete
 Distributions/Discrete/Binomial
