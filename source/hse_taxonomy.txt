@@ -198,6 +198,10 @@ Probability/Elementary Probability/Combinations
 Probability/Elementary Probability/Permutations
 Probability/Elementary Probability/Conditional probability
 Probability/Elementary Probability/Random variables
+Probability/Elementary Probability/Random variables/Cumulative Distribution Function
+Probability/Elementary Probability/Random variables/Probability Density Function
+Probability/Elementary Probability/Random variables/Joint Density Function
+Probability/Elementary Probability/Random variables/Conditional Expected Value
 Probability/Elementary Probability/Random variables/Expected value
 Probability/Elementary Probability/Random variables/Moments
 Probability/Elementary Probability/Random variables/Variance
